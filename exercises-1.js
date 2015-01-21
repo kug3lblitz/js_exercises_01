@@ -51,25 +51,23 @@ console.log(isVowel("a"));
 
 function rovarspraket(phrase){
     "use strict";
-	
-    function translate(phrase){
-	  var contentSplit = phrase.split("");
-	    var result = '';
+	function translate(phrase) {
+		var contentSplit = phrase.split("");
+		var result = "";
 
-	      contentSplit.forEach(function(char){
-		 if (isVowel(char) || char == " "){
-		   result += char;
-		 } else {
-			 char = char + "o" + char;
-				 result += char;
-	 }
-	});
+		contentSplit.forEach(function (char) {
+			if (isVowel(char) || char === " ") {
+				result += char;
+			} else {
+				char = char + "o" + char;
+				result += char;
+			}
+		}
+		return (result);
+	}
+}
 
-      return result;
-}}
-
-	console.log(rovarspraket("this is fun"));
-
+return (rovarspraket("this is fun"));
 
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
